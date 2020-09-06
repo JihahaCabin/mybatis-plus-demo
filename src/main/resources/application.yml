@@ -8,3 +8,7 @@ spring:
     password: tangguo
     driver-class-name: com.mysql.jdbc.Driver
 
+#配置mybatis执行日志打印,此处配置的是控制台输出，如果使用log4j,则需要导入相关的依赖
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
