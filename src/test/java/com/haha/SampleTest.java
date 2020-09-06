@@ -21,4 +21,16 @@ public class SampleTest {
         userList.forEach(System.out::println);
     }
 
+    @Test
+    public void testInsert() {
+        System.out.println(("----- insert method test ------"));
+        User user = new User();
+        user.setAge(12);
+        user.setName("haha");
+        user.setEmail("haha@123.com");
+        int insert = userMapper.insert(user);
+        System.out.println(insert);
+        System.out.println(user);
+    }
+
 }
