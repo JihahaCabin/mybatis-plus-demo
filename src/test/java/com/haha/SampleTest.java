@@ -33,4 +33,15 @@ public class SampleTest {
         System.out.println(user);
     }
 
+    @Test
+    public void testUpdate() {
+        System.out.println(("----- update method test ------"));
+        //只更新有赋值的字段，通过条件自动拼接sql
+        User user = new User();
+        user.setId(1L);
+        user.setName("haha2");
+        int insert = userMapper.updateById(user);
+        System.out.println(insert);
+        System.out.println(user);
+    }
 }
